@@ -6,6 +6,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "backpack/basset": "^1.2",
+        "backpack/crud": "^6.2",
+        "backpack/theme-coreuiv4": "^1.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
@@ -13,6 +16,7 @@
         "nunomaduro/larastan": "^2.6"
     },
     "require-dev": {
+        "backpack/generators": "^4.0",
         "barryvdh/laravel-debugbar": "^3.9",
         "barryvdh/laravel-ide-helper": "^2.13",
         "fakerphp/faker": "^1.9.1",
@@ -64,7 +68,8 @@
             "@php ./vendor/bin/pint",
             "@php ./vendor/bin/phpstan analyse",
             "@php ./vendor/bin/pest"
-        ]
+        ],
+        "post-install-cmd": ["php artisan storage:link --quiet"]
     },
     "extra": {
         "laravel": {
