@@ -14,12 +14,27 @@ namespace App\Models{
 /**
  * App\Models\StudenCard
  *
+ * @property int $id
  * @property \App\Enums\SchoolEnum $school
+ * @property string|null $description
+ * @property bool $is_internal
+ * @property int $user_id
+ * @property \Illuminate\Support\Carbon $date_of_birth
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\User|null $user
  * @method static \Database\Factories\StudenCardFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|StudenCard newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|StudenCard newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|StudenCard query()
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereDateOfBirth($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereIsInternal($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereSchool($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|StudenCard whereUserId($value)
  * @mixin \Eloquent
  */
 	class IdeHelperStudenCard {}
